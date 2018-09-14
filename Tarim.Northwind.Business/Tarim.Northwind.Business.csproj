@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac.Extras.DynamicProxy" Version="4.5.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tarim.Northwind.DataAccess\Tarim.Northwind.DataAccess.csproj" />
+    <ProjectReference Include="..\Tarim.Northwind.Entities\Tarim.Northwind.Entities.csproj" />
+  </ItemGroup>
+
+</Project>

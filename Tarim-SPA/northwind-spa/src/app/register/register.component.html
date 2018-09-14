@@ -1,0 +1,25 @@
+<form [formGroup]="registerForm" (ngSubmit)="register()">
+    <div class="form-group">
+      <label for="email">Email address</label>
+      <input type="email" class="form-control" id="email" name="email" formControlName="email" aria-describedby="emailHelp" placeholder="Enter email">
+      <span class="help-block"
+       *ngIf="registerForm.get('email').hasError('required') && registerForm.get('email').touched">email name is requeired</span>
+     
+    </div>
+
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" name="password" formControlName="email" aria-describedby="email" placeholder="Enter email">  
+        <span class="help-block"
+        *ngIf="registerForm.get('password').hasError('required') && registerForm.get('password').touched">password name is requeired</span>  
+      </div>
+
+      
+    <div class="form-group">
+        <label for="passwordConfirm">Password</label>
+       
+      </div>
+
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>

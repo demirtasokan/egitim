@@ -1,0 +1,23 @@
+
+<input type="text" class="form-control" [(ngModel)]="filterText" id="filterText" name="filterText"   placeholder="search product">
+<div *ngIf="filterText" class="alert alert-primary" role="alert">
+  {{filterText}} araması yaptınız.
+  </div>
+<table class="table table-striped ">
+  <tr *ngFor="let product of products | productFilter:filterText">
+    <td>{{product.productId}}</td>
+    <td>{{product.productName }}</td>
+    <td>{{product.categoryId}}</td>
+    <td>{{product.unitPrice}}</td>
+    <td>{{product.unitPrice | vat}}</td>
+    <td>{{product.productId}}</td>
+    <td>{{product.quantityPerUnit}}</td>
+    <td>{{product.unitsInStock}}</td>
+    <td><button type="button" (click)="addToCart(product)" class="btn btn-primary btn-sm">Add to Cart</button></td>
+  </tr>
+</table>
+
+<div trmLogin>
+  Login box
+
+</div>
